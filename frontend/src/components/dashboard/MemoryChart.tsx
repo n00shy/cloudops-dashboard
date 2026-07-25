@@ -23,19 +23,29 @@ export default function MemoryChart() {
   const fetchHistory = () => {
     fetch("http://localhost:8081/api/metrics/history")
       .then((res) => res.json())
-      .then((json) => setData(json))
+      .then((json) => {
+
+        const formattedData: MemoryData[] = json.map((item: any) => ({
+          time: new Date(item.createdAt).toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+          cpu: item.cpu,
+          memory: item.memory,
+        }));
+
+        setData(formattedData);
+
+      })
       .catch((err) => console.error("Failed to fetch Memory history:", err));
   };
 
   useEffect(() => {
 
-    // أول تحميل
     fetchHistory();
 
-    // تحديث كل 5 ثوانٍ
     const interval = setInterval(fetchHistory, 5000);
 
-    // تنظيف الـ Interval
     return () => clearInterval(interval);
 
   }, []);
