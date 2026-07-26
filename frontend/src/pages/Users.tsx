@@ -12,7 +12,7 @@ export default function Users() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8081/api/users")
+    fetch(`${import.meta.env.VITE_API_URL}/users`)
       .then((response) => response.json())
       .then((data: User[]) => {
         setUsers(data);

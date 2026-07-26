@@ -21,7 +21,7 @@ export default function SystemStatus() {
   });
 
   const fetchMetrics = () => {
-    fetch("http://localhost:8081/api/metrics")
+    fetch(`${import.meta.env.VITE_API_URL}/metrics`)
       .then((res) => res.json())
       .then((data) => {
         setMetrics(data);

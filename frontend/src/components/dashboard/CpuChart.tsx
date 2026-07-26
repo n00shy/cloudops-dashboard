@@ -21,7 +21,7 @@ export default function CpuChart() {
   const [data, setData] = useState<CpuData[]>([]);
 
   const fetchHistory = () => {
-    fetch("http://localhost:8081/api/metrics/history")
+    fetch(`${import.meta.env.VITE_API_URL}/metrics/history`)
       .then((res) => res.json())
       .then((json) => {
 
