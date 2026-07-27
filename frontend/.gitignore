@@ -11,7 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-/home/abdu/test/cloudops-dashboard/k8s/secret.yml
+k8s/secret.yml
 
 # Editor directories and files
 .vscode/*
