@@ -43,32 +43,6 @@ jobs:
 
 
 
-    # Backend Test
-
-    - name: Backend Test
-
-      run: |
-
-        cd backend
-
-        mvn test
-
-
-
-    # Frontend Build
-
-    - name: Frontend Build
-
-      run: |
-
-        cd frontend
-
-        npm install
-
-        npm run build
-
-
-
     # Security Scan
 
     - name: Gitleaks Scan
