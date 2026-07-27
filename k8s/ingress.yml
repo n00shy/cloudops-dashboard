@@ -6,12 +6,11 @@ metadata:
   namespace: cloudops
 
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
 
   rules:
-    - host: cloudops.local
 
-      http:
+    - http:
         paths:
 
           - path: /
