@@ -12,7 +12,7 @@ data:
   POSTGRES_USER: cloudops
 
   # Spring Boot
-  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-service:5432/cloudops_db
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgreseip:5432/cloudops_db
   SPRING_DATASOURCE_USERNAME: cloudops
 
   #backen_port
