@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: abdullahahmed1101076/cloudops-backend:v1
+          image: n00shy/cloudops-backend:v1
           imagePullPolicy: IfNotPresent
 
           ports:

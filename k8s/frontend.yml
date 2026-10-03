@@ -6,7 +6,7 @@ metadata:
   namespace: cloudops
 
 spec:
-  replicas: 2
+  replicas: 1
 
   selector:
     matchLabels:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: abdullahahmed1101076/cloudops-frontend:v1
+          image: n00shy/cloudops-frontend:v1
           imagePullPolicy: IfNotPresent
 
           ports:
